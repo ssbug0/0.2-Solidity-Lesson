@@ -20,7 +20,7 @@ contract StorageArray {
     * @return Value by index or error
     */
     function get(uint _index) public view returns (uint) {
-        require(data.length > _index, "Array out of bounds");
+        require(_index < data.length, "Index out of bounds");
         return data[_index];
     }
 
