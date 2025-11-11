@@ -81,7 +81,7 @@ npx hardhat run scripts/deploy-storage-simple.ts --network localMetaMask
 Инструкция по интеграции hardhat с Metamask
 https://medium.com/@cyri113/tutorial-adding-hardhat-accounts-to-metamask-1c602cfbcf05
 
-Создайте .env файл в root дирректории
+Создайте .env файл в root дирректории со приватным ключом и базовым балансом (пример)
 ```bash
 HARDHAT_ACCOUNT_PRIVATE_KEY="ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 HARDHAT_ACCOUNT_BALANCE="10000000000000000000000"
