@@ -39,7 +39,7 @@ describe("StorageArray", function () {
 
     it("Should revert when getting out-of-bounds index", async function () {
         await expect(storageArray.get(999))
-            .to.be.revertedWith("Array out of bounds");
+            .to.be.revertedWith("Index out of bounds");
     });
 
     it("Should set element by index", async function () {

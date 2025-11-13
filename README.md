@@ -21,7 +21,12 @@
 Для MacOs
 ```bash
 brew tap ethereum/ethereum
-brew install solidity@5
+brew install solidity@latest
+```
+
+или
+```bash
+npm install solc
 ```
 
 ### Проверка версии
@@ -83,8 +88,18 @@ https://medium.com/@cyri113/tutorial-adding-hardhat-accounts-to-metamask-1c602cf
 
 Создайте .env файл в root дирректории со приватным ключом и базовым балансом (пример)
 ```bash
-HARDHAT_ACCOUNT_PRIVATE_KEY="ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-HARDHAT_ACCOUNT_BALANCE="10000000000000000000000"
+HARDHAT_ACCOUNT_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+HARDHAT_ACCOUNT_PRIVATE_KEY_2=
+HARDHAT_ACCOUNT_PRIVATE_KEY_3=
+```
+
+Опционально в .env для скрипта check-contract можно добавить
+```bash
+CONTRACT_ADDR=[адрес контракта]
+```
+после чего проверить задеплоен ли контракт
+```bash
+npx hardhat run scripts/check-contract.ts --network localMetaMask
 ```
 
 # Рефлексия

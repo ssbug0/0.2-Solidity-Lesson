@@ -1,9 +1,9 @@
-import type { HardhatUserConfig } from "hardhat/config";
+import { task, HardhatUserConfig, configVariable } from "hardhat/config";
 
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
-import { configVariable } from "hardhat/config";
 
 import 'dotenv/config';
+
 
 const config: HardhatUserConfig = {
   plugins: [hardhatToolboxMochaEthersPlugin],
@@ -39,15 +39,14 @@ const config: HardhatUserConfig = {
       accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
     },
     localMetaMask: {
-      type: "edr-simulated",
+      type: "http",
       chainId: 31337,
-      chainType: "l1",
+      url: "http://127.0.0.1:8545",
       accounts: [
-        {
-          privateKey: process.env.HARDHAT_ACCOUNT_PRIVATE_KEY,
-          balance: process.env.HARDHAT_ACCOUNT_BALANCE
-        }
-      ]
+        process.env.HARDHAT_ACCOUNT_PRIVATE_KEY,
+        process.env.HARDHAT_ACCOUNT_PRIVATE_KEY_2,
+        process.env.HARDHAT_ACCOUNT_PRIVATE_KEY_3
+      ],
     }
   },
 };
