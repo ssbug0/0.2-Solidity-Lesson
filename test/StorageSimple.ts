@@ -81,4 +81,3 @@ describe("StorageSimple", function () {
         await expect(ethers.provider.call(tx)).to.be.revertedWithoutReason();
     });
 });
-
