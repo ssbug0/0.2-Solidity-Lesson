@@ -8,6 +8,14 @@ import "../contracts/StorageSimple.sol";
 contract StorageSimpleTest is Test {
     StorageSimple storageSimple;
 
+    /**
+    * @notice Test addresses
+    */
+    // address constant USER_1 = address(0x1);
+    // address constant USER_2 = address(0x2);
+    address owner = makeAddr("owner");
+    address attacker = makeAddr("attacker");
+
     function setUp() public {
         storageSimple = new StorageSimple();
     }
@@ -65,5 +73,15 @@ contract StorageSimpleTest is Test {
     function testGetValueAccessible() public {
         storageSimple.setValue(99);
         assertEq(storageSimple.getValue(), 99);
+    }
+
+    /**
+     * @notice Set test hash
+     */
+    function testSetHash() public {
+        string memory message = "test";
+        bytes32 messageHash = keccak256(abi.encodePacked(message));
+        storageSimple.setHashedValue(messageHash);
+        assertEq(storageSimple.getHashedValue(), messageHash);
     }
 }

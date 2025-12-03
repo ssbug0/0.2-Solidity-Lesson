@@ -46,7 +46,15 @@ const config: HardhatUserConfig = {
         {
           privateKey: process.env.HARDHAT_ACCOUNT_PRIVATE_KEY,
           balance: process.env.HARDHAT_ACCOUNT_BALANCE
-        }
+        },
+        {
+          privateKey: process.env.HARDHAT_ACCOUNT_PRIVATE_KEY_2,
+          balance: process.env.HARDHAT_ACCOUNT_BALANCE_2
+        },
+        {
+          privateKey: process.env.HARDHAT_ACCOUNT_PRIVATE_KEY_3,
+          balance: process.env.HARDHAT_ACCOUNT_BALANCE_3
+        },
       ]
     }
   },

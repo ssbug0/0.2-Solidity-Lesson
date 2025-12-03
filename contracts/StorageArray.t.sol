@@ -6,7 +6,7 @@ import "../contracts/StorageArray.sol";
 
 
 contract StorageArrayTest is Test {
-    StorageArray storageArray;
+    StorageArray public storageArray;
 
     function setUp() public {
         storageArray = new StorageArray();

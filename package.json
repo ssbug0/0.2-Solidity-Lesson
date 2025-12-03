@@ -18,6 +18,8 @@
     "typescript": "~5.8.0"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "solc": "^0.8.30",
+    "solidity": "^0.0.1"
   }
 }

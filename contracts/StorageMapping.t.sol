@@ -6,7 +6,7 @@ import "../contracts/StorageMapping.sol";
 
 
 contract StorageMappingTest is Test {
-    StorageMapping storageMapping;
+    StorageMapping public storageMapping;
 
     /**
     * @notice Test addresses
